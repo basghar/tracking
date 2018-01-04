@@ -1,0 +1,13 @@
+.tracking-item .btn-group {
+    margin-left: 5px;
+}
+
+.tracking-item .item-property {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.tracking-item .heading {
+    display: inline-block;
+    margin-right: 110px;
+}

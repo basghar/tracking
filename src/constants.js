@@ -1,0 +1,2 @@
+
+export const TRACKING_NO_TEMPLATE = '{TRACKING_NUMBER}';

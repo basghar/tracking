@@ -1,0 +1,60 @@
+.App .container {
+    margin-top: 5px;
+}
+
+.App .iframe-container {
+    height: calc(100vh - 140px);
+    overflow-y: auto;
+}
+
+.App .link-cursor {
+    cursor: pointer;
+}
+
+.details-heading {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 30px;
+}
+
+.loading {
+    animation: App-logo-spin infinite 2s linear;
+    height: 23px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.genie {
+    height: 28px;
+    margin-left: 8px;
+    margin-top: -5px;
+}
+
+.App-header {
+    text-align: center;
+    background-color: #222;
+    height: 40px;
+    padding: 2px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
