@@ -1,14 +1,16 @@
 import React, {Component} from 'react';
+import _ from 'lodash';
 import {ListGroup} from 'react-bootstrap';
 import TrackingItem from "./TrackingItem";
 import TrackingDetails from "../details/TrackingDetails";
 
 class TrackingBoard extends Component {
+
     constructor(props) {
         super(props);
 
         this.state = {
-            items: props.items,
+            items: _.sortBy(props.items, (i) => i.status),
             selectedItem: null
         };
     }
@@ -28,17 +30,26 @@ class TrackingBoard extends Component {
     }
 
     renderList(items) {
-        let trackingItems = items.map((item, index) => {
-            return <TrackingItem key={index}
-                                 item={item}
-                                 onShowDetails={() => this.selectItem(item)}/>
-        });
+        let trackingItems =
+            _.sortBy(items, (i) => i.status)
+                .map((item, index) => {
+                    return <TrackingItem key={index}
+                                         item={item}
+                                         onStatusChanged={(item) => this.resort(item)}
+                                         onShowDetails={() => this.selectItem(item)}/>
+                });
 
         return (
             <ListGroup>
                 {trackingItems}
             </ListGroup>
         );
+    }
+
+    resort() {
+        this.setState({
+            items: _.sortBy(this.state.items, (i) => i.status)
+        })
     }
 
     selectItem(item) {

@@ -3,19 +3,17 @@ import './TrackingItem.css';
 
 import React, {Component} from 'react';
 import {Button, ButtonGroup} from 'react-bootstrap'
-import {afterShipApi, afterShipSlugs} from '../../apis'
+import {afterShipApi, afterShipSlugs, Status} from '../../apis'
 
 class TrackingItem extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            status: null,
+            status: props.item.status,
             estimatedDelivery: null,
             lastKnownLocation: null
         };
-
-        this.updateStatus(props.item);
     }
 
     static getAfterShipSlug(url) {
@@ -24,6 +22,12 @@ class TrackingItem extends Component {
         });
 
         return matchedDomain ? afterShipSlugs[matchedDomain] : null;
+    }
+
+    componentWillMount() {
+        if (!this.state.status) {
+            this.updateStatus(this.props.item);
+        }
     }
 
     render() {
@@ -61,7 +65,7 @@ class TrackingItem extends Component {
                     <div className="item-property">
                         <strong className="text-info">Status:</strong>
                         <span
-                            className={status === 'Delivered' ? 'text-success bold' : ''}> {status}</span>
+                            className={status === Status.Delivered ? 'text-success bold' : ''}> {status}</span>
                     </div>
                     }
 
@@ -104,6 +108,8 @@ class TrackingItem extends Component {
                             estimatedDelivery: tracking.expected_delivery,
                             lastKnownLocation: tracking.tag === 'Delivered' ? null: lastLocation
                         });
+
+                        this.props.onStatusChanged(item);
                     })
                     .catch((error) => {
                         console.log(error);

@@ -5,6 +5,10 @@ export const afterShipSlugs = {
     'track24.net': 'australia-post'
 };
 
+export const Status = Object.freeze({
+    Delivered:   'Delivered'
+});
+
 export const afterShipApi = axios.create({
     baseURL: 'https://api.aftership.com/v4',
     timeout: 60000,

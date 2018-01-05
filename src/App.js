@@ -37,20 +37,6 @@ let items = [
         trackingUrl: `https://track24.net/?code=${TRACKING_NO_TEMPLATE}`
     },
     {
-        name: 'Laptop CPU Cooling Fan for SAMSUNG laptop',
-        trackingNumber: 'UBY7410777015124',
-        orderedFrom: 'AliExpress/China',
-        productUrl: 'https://www.aliexpress.com/item/Free-shipping-Brand-New-laptop-Cooling-Fan-for-SAMSUNG-NP700Z5B-700Z5A-700z5c-700Z5-A-pair-left/1915167628.html',
-        trackingUrl: `https://track24.net/?code=${TRACKING_NO_TEMPLATE}`
-    },
-    {
-        name: 'Bottom shell for SAMSUNG laptop',
-        trackingNumber: 'UBY7410655015123',
-        orderedFrom: 'AliExpress/China',
-        productUrl: 'https://www.aliexpress.com/item/new-Bottom-shell-for-SAMSUNG-LCD-15-6-NP700Z5-NP700Z5A-NP700Z5B-NP700Z5C-Bottom-case-Bottom-base/32807491638.html',
-        trackingUrl: `https://track24.net/?code=${TRACKING_NO_TEMPLATE}`
-    },
-    {
         name: 'LCD Touchscreen Digitizer For Lenovo A750',
         orderedFrom: 'Ebay/China',
         productUrl: 'https://www.ebay.com.au/itm/Brand-New-Lcd-Touch-Screen-Lens-Glass-Digitizer-For-Lenovo-A750-GS-168/181986094267'
@@ -58,9 +44,15 @@ let items = [
     {
         name: 'Refillable Ink Cartridges for WF 645 Printer',
         trackingNumber: 'LP009098069HK',
-        status: 'Handed-over to OzPost',
         orderedFrom: 'Ebay/China',
         productUrl: 'https://www.ebay.com.au/itm/NONOEM-Empty-Refillable-Ink-Cartridges-for-Workforce-645-840-845-WF-7510-WF-7520/372055670595',
+        trackingUrl: `https://babar4spamgmail.aftership.com/${TRACKING_NO_TEMPLATE}`
+    },
+    {
+        name: 'Respro Cinqro Anti Pollution Mask',
+        trackingNumber: '2QY009152101000930203',
+        orderedFrom: 'Wiggles/UK',
+        productUrl: 'http://respro.com/store/product/cinqro-mask',
         trackingUrl: `https://babar4spamgmail.aftership.com/${TRACKING_NO_TEMPLATE}`
     },
     {
@@ -72,15 +64,25 @@ let items = [
         trackingUrl: `https://babar4spamgmail.aftership.com/${TRACKING_NO_TEMPLATE}`
     },
     {
-        name: 'Respro Cinqro Anti Pollution Mask',
-        trackingNumber: '2QY009152101000930203',
-        orderedFrom: 'Wiggles/UK',
-        productUrl: 'http://respro.com/store/product/cinqro-mask',
-        trackingUrl: `https://babar4spamgmail.aftership.com/${TRACKING_NO_TEMPLATE}`
+        name: 'Laptop CPU Cooling Fan for SAMSUNG laptop',
+        trackingNumber: 'UBY7410777015124',
+        status: 'Delivered',
+        orderedFrom: 'AliExpress/China',
+        productUrl: 'https://www.aliexpress.com/item/Free-shipping-Brand-New-laptop-Cooling-Fan-for-SAMSUNG-NP700Z5B-700Z5A-700z5c-700Z5-A-pair-left/1915167628.html',
+        trackingUrl: `https://track24.net/?code=${TRACKING_NO_TEMPLATE}`
+    },
+    {
+        name: 'Bottom shell for SAMSUNG laptop',
+        trackingNumber: 'UBY7410655015123',
+        status: 'Delivered',
+        orderedFrom: 'AliExpress/China',
+        productUrl: 'https://www.aliexpress.com/item/new-Bottom-shell-for-SAMSUNG-LCD-15-6-NP700Z5-NP700Z5A-NP700Z5B-NP700Z5C-Bottom-case-Bottom-base/32807491638.html',
+        trackingUrl: `https://track24.net/?code=${TRACKING_NO_TEMPLATE}`
     },
     {
         name: 'Respro Ultralight Anti Pollution Mask',
         trackingNumber: '2QY009151701000930206',
+        status: 'Delivered',
         orderedFrom: 'Wiggles/UK',
         productUrl: 'http://respro.com/store/product/ultra-light',
         trackingUrl: `https://babar4spamgmail.aftership.com/${TRACKING_NO_TEMPLATE}`
